@@ -1,0 +1,8 @@
+{
+  "name": "adminmall",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ZhangZhengYi1996/adminmall.git",
+  "author": "ZHANG ZHENGYI <zhangzhengyi1vivi@gmail.com>",
+  "license": "MIT"
+}
