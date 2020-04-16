@@ -1,0 +1,6 @@
+<br />
+<b>Warning</b>:  filesize(): stat failed for /var/www/clients/client0/web32/web/uploads//5e987a8053f9d.16px.ico in <b>/var/www/clients/client0/web32/web/download.php</b> on line <b>39</b><br />
+<br />
+<b>Warning</b>:  Cannot modify header information - headers already sent by (output started at /var/www/clients/client0/web32/web/download.php:39) in <b>/var/www/clients/client0/web32/web/download.php</b> on line <b>39</b><br />
+<br />
+<b>Warning</b>:  readfile(/var/www/clients/client0/web32/web/uploads//5e987a8053f9d.16px.ico): failed to open stream: No such file or directory in <b>/var/www/clients/client0/web32/web/download.php</b> on line <b>42</b><br />
