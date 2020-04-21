@@ -1,14 +1,33 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "font-awesome/css/font-awesome.min.css";
-import "./index.css";
-import "./index.scss";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+
+//页面
+import Home from "page/home/index.jsx";
+import Layout from "component/layout/index.jsx";
+
+class App extends Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+  render() {
+    return (
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/product" component={Home} exact />
+            <Route path="/product-category" component={Home} exact />
+          </Switch>  
+        </Layout>
+      </BrowserRouter>
+    );
+  }
+}
 
 ReactDOM.render(
-  <div>
-    
-    <h1>Hello, world!</h1>
-  </div>,
-
-  document.getElementById('app')
+  <App />,
+  document.getElementById("app")
 );
+
+
