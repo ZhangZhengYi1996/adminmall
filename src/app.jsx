@@ -8,20 +8,21 @@ import Layout from "component/layout/index.jsx";
 import Login from "page/login/index.jsx";
 import ErrorPage from "page/error/index.jsx";
 import UserList from "page/user/index.jsx"
+import ProductRouter from "page/product/router.jsx";
 
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     let LayOutRouter = (
       <Layout>
         <Switch>
+          <Route path="/product" component={ProductRouter} />
+          <Route path="/product-category" component={Home}/>
           <Route path="/" component={Home} exact />
-          <Route path="/product" component={Home} />
-          <Route path="/product-category" component={Home} />
           <Route path="/user/index" component={UserList} />
           <Redirect from="/user" to="/user/index" exact />
           <Route component={ErrorPage} />
@@ -31,13 +32,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/" render={(props) => {
-            return (
-              LayOutRouter
-            )
-          }} />
-
+          <Route path="/login" component={Login} exact />
+          <Route path='/' render={props => LayOutRouter} />
         </Switch>
       </BrowserRouter>
     );

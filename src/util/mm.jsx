@@ -18,7 +18,7 @@ class MUtil {
                     }
                 },
                 error:err=>  {
-                    typeof reject === "function" && reject(err.statusText);
+                    typeof reject === "function" && reject(err.msg);
                 }
             })
         });
@@ -37,6 +37,10 @@ class MUtil {
     //错误处理
     errorTips(errMsg) {
         alert(errMsg || "有错误～");
+    }
+    //成功信息
+    successTips(res){
+        alert(res || "操作成功～");
     }
     //localstorage 存储
     setStorage(key, value) {
