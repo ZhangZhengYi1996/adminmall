@@ -21,7 +21,7 @@ class App extends Component {
       <Layout>
         <Switch>
           <Route path="/product" component={ProductRouter} />
-          <Route path="/product-category" component={Home}/>
+          <Route path="/product-category" component={ProductRouter}/>
           <Route path="/" component={Home} exact />
           <Route path="/user/index" component={UserList} />
           <Redirect from="/user" to="/user/index" exact />
